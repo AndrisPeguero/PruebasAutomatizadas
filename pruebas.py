@@ -68,22 +68,33 @@ def test_login_y_registro(navegador):
         esperar(2)
         guardar_captura(navegador, "01_Login")
 
+        navegador.find_element(By.NAME, "usuario").send_keys("Andris")
+        navegador.find_element(By.NAME, "contraseña").send_keys("12345654")
+        navegador.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
+        esperar(5)
+        guardar_captura(navegador, "02_Login_incorrecto")
+        
+        
+        navegador.find_element(By.NAME, "usuario").clear()
+        navegador.find_element(By.NAME, "contraseña").clear()
         navegador.find_element(By.NAME, "usuario").send_keys("admin")
         navegador.find_element(By.NAME, "contraseña").send_keys("1234")
         navegador.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
-        esperar(2)
-        guardar_captura(navegador, "02_Post_Login")
-
+        esperar(15)
+        guardar_captura(navegador, "03_Login_correcto")
+        
+       
+        
         navegador.get("http://localhost:8080/front.html")
         esperar(2)
-        guardar_captura(navegador, "03_Formulario_Registro")
+        guardar_captura(navegador, "04_Formulario_Registro")
 
         navegador.find_element(By.ID, "nombre").send_keys("UsuarioTest")
         navegador.find_element(By.ID, "correo").send_keys("test@example.com")
         navegador.find_element(By.ID, "clave").send_keys("1234")
         
         esperar(2)
-        guardar_captura(navegador, "04_Registro_Completado")
+        guardar_captura(navegador, "05_Registro_Completado")
         select_status = Select(navegador.find_element(By.ID, "status"))
         select_status.select_by_visible_text("Activo")
 
@@ -93,7 +104,7 @@ def test_login_y_registro(navegador):
             EC.presence_of_element_located((By.ID, "data"))
         )        
         esperar(5)
-        guardar_captura(navegador, "05_Lista_Usuarios")
+        guardar_captura(navegador, "06_Lista_Usuarios")
 
     except Exception as e:
         print("Error:", e)
