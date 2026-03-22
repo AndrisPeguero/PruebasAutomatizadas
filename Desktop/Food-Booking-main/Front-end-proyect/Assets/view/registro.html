@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="esta pagina mostrara el login para acceder a la web">
+    <title>registro web</title>
+    <link rel="stylesheet" href="/Assets/css/lib/bootStrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Assets/css/site/main.css">
+</head>
+<body class="d-flex flex-column min-vh-100"> 
+  <header>
+     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="Login.html">food App<i class="bi bi-egg-fried"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+         <a class="nav-link" aria-current="page" href="Login.html">
+              Login <i class="bi bi-box-arrow-in-right"></i>
+          </a>
+        </li>
+         <li class="nav-item">
+         <a class="nav-link active" aria-current="page" href="Login.html">
+              Registrarse <i class="bi bi-person-plus"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  </header>    
+    <main class="flex-grow-1 container py-4">
+         
+          <div class="container d-flex justify-content-center mt-5 mb-5">
+           <div class="col-12 col-sm-6 col-md-6">
+                 <div class="card">
+                    <div class="card-header bg-dark opacity-75">
+                        <h4 class="text-center text-light fw-bold">Registrarse</h4>
+                    </div>
+                    <div class="card-body form-registro">
+                          <div class="error-registro error" id="error-no-especifico"></div>
+                         <form id="form-registro">
+                            <div class="mb-3">
+                                <label for="Name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="Name" placeholder="Ej: Stivenson">
+                                <small id="error-name" class="error"></small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="LastName" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="LastName" placeholder="Ej: Ramirez">
+                                 <small id="error-LastName" class="error"></small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="email" placeholder="Ej: ejemplo@gmail.com">
+                                <small id="error-email" class="error"></small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="UserName" class="form-label">Nombre de usuario</label>
+                                <input type="text" class="form-control" id="UserName" placeholder="Ej: Usuario1">
+                                 <small id="error-UserName" class="error"></small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="Password" placeholder="Ej: usuer@123" autocomplete="current-password">
+                                <small id="error-password" class="error"></small>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tel" class="form-label">Telefono</label>
+                                <input type="tel" class="form-control" id="tel" placeholder="Ej: 8920200202">
+                                <small id="error-tel" class="error"></small>
+                            </div>
+                       
+                             
+                             <div class="mb-3">
+                                <label for="imagePerfil" class="form-label">Foto de perfil</label>
+                                <input type="file" class="form-control" id="imagePerfil">
+                                <small id="error-image" class="error"></small>
+                             </div>
+
+                                 
+                              <div class="mb-3">
+                                <label for="rol" class="form-label">Tipo de usuario</label>
+                                <select name="roles" id="rol" class="form-select">
+                                   <option value="">Selecciona una opcion</option>
+                                   <option value="Cliente">Cliente</option>
+                                   <option value="Propietario">Propietario</option>
+                                </select>
+                                 <small id="error-role" class="error"></small>
+                             </div>  
+
+                             <div class="mb-3" id="field-RNC">
+                                 <label for="RNC" class="form-label">RNC</label>
+                                 <input type="text" class="form-control" id="RNC" placeholder="ej: 1-01-85004-3">
+                                 <small id="error-rnc" class="error"></small>
+                             </div>
+                            <div class="mt-3">
+                                <button id="btn-login-submit" type="submit" class="btn btn-outline-primary float-end">Registrarse <i class="bi bi-person-plus"></i></button>
+                                <button id="btn-login-resset" type="button" class="btn btn-outline-warning float-end me-3">Limpiar  <i class="bi bi-arrow-counterclockwise me-2"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                 </div>    
+               </div>
+           </div>
+
+    </main>
+     <footer class="bg-dark text-light text-center py-3 mt-auto">
+    <div class="container"> 
+    <p class="mb-1">
+    <i class="bi bi-egg-fried"></i> Food App <i class="bi bi-heart-fill text-danger"></i>   
+     <small>© 2026 Todos los derechos reservados </small>
+    </p>
+  </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="/Assets/js/lib/bootStrap/bootstrap.min.js"></script>
+    <script src="/Assets/js/site/registro.js"></script>
+</body>
+</html>

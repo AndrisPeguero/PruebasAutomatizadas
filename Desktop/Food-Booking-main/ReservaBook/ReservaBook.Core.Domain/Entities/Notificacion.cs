@@ -1,0 +1,16 @@
+﻿
+
+namespace ReservaBook.Core.Domain.Entities
+{
+    public class Notificacion
+    {
+
+        public int Id { get; set; }
+        public required string SenderId { get; set; }
+        public required  string ReceptorId { get; set; }  
+        public required string Descripcion { get; set; }
+        public required DateTime Fecha { get; set; }
+        public required string Tipo { get; set; }
+
+    }
+}

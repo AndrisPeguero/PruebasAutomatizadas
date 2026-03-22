@@ -1,0 +1,6 @@
+@ReservaBook.presentation.WebApi_HostAddress = https://localhost:5215
+
+GET {{ReservaBook.presentation.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

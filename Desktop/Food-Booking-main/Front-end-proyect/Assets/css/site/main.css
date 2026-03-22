@@ -1,0 +1,79 @@
+html{
+    box-sizing: border-box;
+    --color-error: #f00;
+    --bg-color-form: rgb(239, 232, 232);
+    --font-color-login: #000.5;
+}
+
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+
+.nav-link i,
+.navbar-brand i{
+margin-right:5px;
+}
+
+
+.error,
+.error-rnc{
+    color: var(--color-error);
+    font-size: 0.8rem;
+}
+
+
+.form-iniciar, .form-registro{
+    background-color: var(--bg-color-form) ;
+    font-size: 1rem;
+    color: var(--font-color-login);
+    font-weight: bold;
+}
+
+.form-iniciar input,
+.form-registro input,
+.form-resset input{
+    margin-top: 3px;
+    padding: 5px;
+    border: medium solid #000;
+    border-radius: 8px;
+
+}
+
+.form-registro select{
+    border-width: 3px;
+}
+
+.form-iniciar .input-error,
+.form-registro .input-error,
+.form-resset  .input-error{
+    border-color: #f00;
+}
+
+
+.form-iniciar .input-success,
+.form-registro .input-success,
+.form-resset .input-success{
+    border-color: rgb(74, 214, 74);
+}
+
+
+.error-notEspecifico,
+.error-registro{
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+
+.message-success{
+    text-align: center;
+    margin-bottom: 5px;
+    color: rgb(57, 207, 55);
+}
+
+#field-RNC{
+    display: none;
+}
